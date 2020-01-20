@@ -1,0 +1,20 @@
+table{
+    text-align: center;
+    background: linear-gradient(to bottom, #0000007a -15%, #ffffff86 119%);
+   
+
+
+}
+.btn-success{
+    height: 31px;
+}
+thead, tbody{
+    color:white;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+thead th{
+    font-size: 20px;
+}
+i{
+    font-size: 28px;
+}

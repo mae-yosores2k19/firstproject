@@ -1,0 +1,46 @@
+.card-img-top {
+  height: 200px;
+}
+.error {
+  height: 10px !important;
+  color: red;
+  margin-top: -10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 30%;
+  padding: 10px;
+}
+.grid-container h1 {
+  text-align: center;
+}
+.card-body h1 {
+  text-align: center;
+  font-family: fantasy !important;
+  color: white;
+  text-shadow: 2px 5px 8px #ff0000;
+  position: relative;
+  margin-bottom: 77px;
+  margin-top: -114px;
+  font-size: 50px;
+}
+.card {
+  /* width:80%;
+  margin-left:100px; */
+  font-family: cursive;
+}
+.card-body {
+  background: linear-gradient(to bottom right, #33ccff -15%, #ffffff 119%);
+}
+button {
+  color: red !important;
+}
+.btn-outline-primary {
+  width: 230px;
+  height: 30px;
+  margin-left: 50px;
+  padding-top: 1px;
+}
+.titletbl {
+  margin-left: 250px;
+}
