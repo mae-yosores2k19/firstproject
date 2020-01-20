@@ -9,7 +9,7 @@
     <form (ngSubmit)="onSubmit()" #form="ngForm">
       <div class="row">
         <div class="col">
-          <label>First Name:</label>
+          <i class="fa fa-user"></i>&nbsp;<label>First Name:</label>
           <input
             type="name"
             class="form-control"
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="col">
-          <label>Last Name:</label>
+          <i class="fa fa-user"></i>&nbsp;<label>Last Name:</label>
           <input
             type="name"
             class="form-control"
@@ -58,7 +58,7 @@
       <!-- 2nd row gender & Age -->
       <div class="row">
         <div class="col">
-          <label>Gender:</label>
+          <i class="fa fa-venus-double"></i>&nbsp;<label>Gender:</label>
           <select
             class="custom-select"
             id="tempgender"
@@ -71,7 +71,7 @@
           </select>
         </div>
         <div class="col">
-          <label>Age:</label>
+          <i class="fa fa-calendar"></i>&nbsp;<label>Age:</label>
           <input
             type="number"
             class="form-control"
@@ -94,7 +94,7 @@
       <!-- 3rd row email & Department  -->
       <div class="row">
         <div class="col">
-          <label>E-mail:</label>
+          <i class="fa fa-envelope-o"></i>&nbsp;<label>E-mail:</label>
           <input
             type="email"
             class="form-control"
@@ -115,7 +115,7 @@
           </div>
         </div>
         <div class="col">
-          <label>Department:</label>
+          <i class="fa fa-address-book-o"></i>&nbsp;<label>Department:</label>
           <input
             type="name"
             class="form-control"
@@ -138,7 +138,7 @@
       
      
       <!-- Last row Addres -->
-      <label>Address:</label>
+      <i class="fa fa-address-card-o"></i>&nbsp;<label>Address:</label>
       <input
         type="address"
         class="form-control"
@@ -150,7 +150,7 @@
 
       <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert ">
         <div class="error">
-          <p *ngIf="name.errors.required">This Field is Required</p>
+          <p *ngIf="name.errors.required">Address is Required</p>
         </div>
       </div>
       <br />
@@ -161,13 +161,14 @@
       
     </form>
   </div>
-  <div >
+  <div>
     <div *ngIf="hide" class="card">
       <div class="card-body">
         <div class="grid-container">
           <h1 class="titletbl">List Of Student</h1>
           <button class="btn btn-outline-primary" (click)="handleAdd()">Back to Registration Form</button>
         </div>
+        <p class="numOfStdnt">{{formdata.id}} Registered Student</p>
           <app-child (editEmit)="editParent($event)" [passData]="dataArray" ></app-child>
       </div>
     </div>

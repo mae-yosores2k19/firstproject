@@ -28,7 +28,7 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    this.tempID += 1;
+    this.tempID = this.dataArray.length + 1;
     this.formdata = {
       id: this.tempID,
       fname: this.tempfname,
@@ -44,7 +44,7 @@ export class RegistrationComponent implements OnInit {
     this.tempfname = "";
     this.templname = "";
     this.tempgender = "";
-    this.tempage = 0;
+    this.tempage = null;
     this.tempemail = "";
     this.tempdepartment = "";
     this.tempaddress = "";
@@ -77,8 +77,19 @@ export class RegistrationComponent implements OnInit {
     };
     this.onSubmit()
   }
+  handleAdd() {
+    this.hide = false;
+  }
+}
 
-  // handleSaveNotRemove() {
+
+
+
+
+
+
+
+// handleSaveNotRemove() {
   //   this.dataArray.forEach(element => {
   //     if (element.id == this.editId) {
   //       element.fname = this.tempfname;
@@ -100,8 +111,3 @@ export class RegistrationComponent implements OnInit {
   //   this.tempdepartment = "";
   //   this.tempaddress = "";
   // }
-
-  handleAdd() {
-    this.hide = false;
-  }
-}

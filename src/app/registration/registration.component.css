@@ -25,15 +25,14 @@
   font-size: 50px;
 }
 .card {
-  /* width:80%;
-  margin-left:100px; */
   font-family: cursive;
-}
-.card-body {
-  background: linear-gradient(to bottom right, #33ccff -15%, #ffffff 119%);
+  background: linear-gradient(to bottom right,rgba(247, 248, 250, 0.637) -15%, rgba(0, 255, 255, 0.473) 119%);
+  border-radius: 20px;
+  margin-top:50px;
 }
 button {
   color: red !important;
+  
 }
 .btn-outline-primary {
   width: 230px;
@@ -43,4 +42,18 @@ button {
 }
 .titletbl {
   margin-left: 250px;
+}
+.numOfStdnt{
+  color:blue;
+}
+i{
+  
+  font-size: 20px;
+}
+input{
+  background-color: rgba(127, 255, 212, 0.288);
+}
+select{
+  background-color: rgba(127, 255, 212, 0.288);
+
 }
