@@ -23,24 +23,42 @@ export class RegistrationComponent implements OnInit {
   editId: Number;
   hide = false;
 
+  stitle = "Are you sure you want to submit?";
+  sconfirmButtonText = "Yes Submit it";
+  sfire1 = "Add!";
+  sfire2 = "You Are Now Registered!!!";
+
   constructor() {
     this.formdata = new Form();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
+  notify() {
+    if (this.editing == true) {
+      this.stitle = "Do you want to save changes?";
+      this.sconfirmButtonText = "Yes Save it";
+      this.sfire1 = "Changes has been saved!";
+      this.sfire2 = "You're information is now updated!!!";
+    } else {
+      this.stitle = "Are you sure you want to submit?";
+      this.sconfirmButtonText = "Yes Submit it";
+      this.sfire1 = "Add!";
+      this.sfire2 = "You Are Now Registered!!!";
+    }
+  }
 
   onSubmit() {
+    this.notify();
     Swal.fire({
-      title: "Are you sure you want to submit?",
-     
+      title: this.stitle,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes Submit it"
+      confirmButtonText: this.sconfirmButtonText
     }).then(result => {
       if (result.value) {
-        Swal.fire("Add!", "You Are Now Registered!!!", "success");
+        Swal.fire(this.sfire1, this.sfire2, "success");
         this.tempID = this.dataArray.length + 1;
         this.formdata = {
           id: this.tempID,
@@ -87,14 +105,18 @@ export class RegistrationComponent implements OnInit {
     for (let i = 0; i < this.dataArray.length; ++i) {
       if (this.dataArray[i].id == this.editId) {
         this.dataArray.splice(i, 1);
-        this.editing = false;
+        //this.editing = false;
       }
     }
     this.onSubmit();
+    this.editing = false;
   }
   handleAdd() {
     this.hide = false;
   }
+
+
+ 
 }
 
 // handleSaveNotRemove() {
